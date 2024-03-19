@@ -40,6 +40,7 @@ namespace Server
             {
                 Send(item);
             }
+            AddMessage(txbMessage.Text);
             txbMessage.Clear();
         }
 
@@ -95,7 +96,7 @@ namespace Server
         // gui tin
         void Send(Socket client)
         {
-            if (txbMessage.Text != string.Empty)
+            if (client != null && txbMessage.Text != string.Empty)
                 client.Send(Serialize(txbMessage.Text));
         }
         // nhan tin
@@ -110,6 +111,12 @@ namespace Server
                     client.Receive(data);
 
                     string message = (string)Deserialize(data);
+
+                    foreach (Socket item in clientList)
+                    {
+                        if (item != null && item != client)
+                            item.Send(Serialize(message));
+                    }
 
                     AddMessage(message);
                 }
