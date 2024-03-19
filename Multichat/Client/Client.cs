@@ -22,6 +22,9 @@ namespace Client
         public Client()
         {
             InitializeComponent();
+
+            CheckForIllegalCrossThreadCalls = false;
+
             Connect();
         }
 
@@ -55,7 +58,7 @@ namespace Client
                 MessageBox.Show("Không thể kết nối tới server!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            client.Connect(IP);
+            // client.Connect(IP);
 
             Thread listen = new Thread(Receive);
             listen.IsBackground = true;

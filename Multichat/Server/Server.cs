@@ -21,6 +21,10 @@ namespace Server
         public Server()
         {
             InitializeComponent();
+
+            CheckForIllegalCrossThreadCalls = false;
+
+            Connect();
         }
 
         // dong ket noi
