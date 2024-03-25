@@ -34,7 +34,7 @@ namespace Client
         private void btnSend_Click(object sender, EventArgs e)
         {
             Send();
-            AddMessage(txbMessage.Text);
+            AddMessage("[" + txbUsername.Text + "]: " + txbMessage.Text);
         }
 
         //Socket //IP
@@ -75,7 +75,7 @@ namespace Client
         void Send()
         {
             if (txbMessage.Text != string.Empty)
-                client.Send(Serialize(txbMessage.Text));
+                client.Send(Serialize("[" + txbUsername.Text + "]: " + txbMessage.Text));
         }
         // nhan tin
         void Receive()
@@ -101,8 +101,9 @@ namespace Client
         // add message vao khung chat
         void AddMessage(string s)
         {
-            lsvMessage.Items.Add(new ListViewItem() { Text = s });
-            txbMessage.Clear();
+
+            richTextBox1.Text += s + "\n";
+            txbMessage.Text ="";
         }
         // phan manh
         byte[] Serialize(object obj) 

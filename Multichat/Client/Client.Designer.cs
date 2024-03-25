@@ -30,7 +30,8 @@
         {
             this.txbMessage = new System.Windows.Forms.TextBox();
             this.btnSend = new System.Windows.Forms.Button();
-            this.lsvMessage = new System.Windows.Forms.ListView();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txbUsername = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txbMessage
@@ -51,15 +52,20 @@
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
-            // lsvMessage
+            // richTextBox1
             // 
-            this.lsvMessage.HideSelection = false;
-            this.lsvMessage.Location = new System.Drawing.Point(12, 12);
-            this.lsvMessage.Name = "lsvMessage";
-            this.lsvMessage.Size = new System.Drawing.Size(776, 371);
-            this.lsvMessage.TabIndex = 3;
-            this.lsvMessage.UseCompatibleStateImageBehavior = false;
-            this.lsvMessage.View = System.Windows.Forms.View.List;
+            this.richTextBox1.Location = new System.Drawing.Point(12, 47);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(776, 336);
+            this.richTextBox1.TabIndex = 4;
+            this.richTextBox1.Text = "";
+            // 
+            // txbUsername
+            // 
+            this.txbUsername.Location = new System.Drawing.Point(94, 12);
+            this.txbUsername.Name = "txbUsername";
+            this.txbUsername.Size = new System.Drawing.Size(174, 22);
+            this.txbUsername.TabIndex = 5;
             // 
             // Client
             // 
@@ -67,7 +73,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lsvMessage);
+            this.Controls.Add(this.txbUsername);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.txbMessage);
             this.Name = "Client";
@@ -81,7 +88,8 @@
         #endregion
         private System.Windows.Forms.TextBox txbMessage;
         private System.Windows.Forms.Button btnSend;
-        private System.Windows.Forms.ListView lsvMessage;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox txbUsername;
     }
 }
 
