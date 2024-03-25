@@ -33,19 +33,6 @@ namespace Server
             Close();
         }
 
-        // gui tin cho tat ca client
-        private void btnSend_Click(object sender, EventArgs e)
-        {
-            foreach (Socket item in clientList)
-            {
-                Send(item);
-            }
-            AddMessage(txbMessage.Text);
-            txbMessage.Clear();
-        }
-
-
-
         //Socket //IP
 
         IPEndPoint IP;
@@ -93,13 +80,6 @@ namespace Server
             server.Close();
         }
 
-        // gui tin
-        void Send(Socket client)
-        {
-            if (client != null && txbMessage.Text != string.Empty)
-                client.Send(Serialize(txbMessage.Text));
-        }
-        // nhan tin
         void Receive(object obj)
         {
             Socket client = obj as Socket;
@@ -131,7 +111,7 @@ namespace Server
         // add message vao khung chat
         void AddMessage(string s)
         {
-            lsvMessage.Items.Add(new ListViewItem() { Text = s });
+            richTextBox1.Text += s + "\n";
         }
         // phan manh
         byte[] Serialize(object obj)
