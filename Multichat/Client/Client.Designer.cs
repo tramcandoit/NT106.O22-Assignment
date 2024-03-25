@@ -32,6 +32,7 @@
             this.btnSend = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.txbUsername = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txbMessage
@@ -67,12 +68,22 @@
             this.txbUsername.Size = new System.Drawing.Size(174, 22);
             this.txbUsername.TabIndex = 5;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 16);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Username";
+            // 
             // Client
             // 
             this.AcceptButton = this.btnSend;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txbUsername);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.btnSend);
@@ -90,6 +101,7 @@
         private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.TextBox txbUsername;
+        private System.Windows.Forms.Label label1;
     }
 }
 

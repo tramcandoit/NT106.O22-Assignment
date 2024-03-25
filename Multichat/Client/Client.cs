@@ -15,6 +15,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Threading;
 using System.Windows.Forms.VisualStyles;
 
+
 namespace Client
 {
     public partial class Client : Form
@@ -33,8 +34,21 @@ namespace Client
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            Send();
-            AddMessage("[" + txbUsername.Text + "]: " + txbMessage.Text);
+            if (txbUsername.Text == string.Empty)
+            {
+                MessageBox.Show("Vui lòng nhập username", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (txbMessage.Text == string.Empty)
+            {
+                MessageBox.Show("Vui lòng nhập tin nhắn", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Send();
+                txbUsername.Enabled = false;
+                string timestamp = DateTime.Now.ToString();
+                AddMessage(timestamp + "\n" + "[" + txbUsername.Text + "]: " + txbMessage.Text + "\n");
+            }   
         }
 
         //Socket //IP
@@ -74,8 +88,10 @@ namespace Client
         // gui tin
         void Send()
         {
+            string timestamp = DateTime.Now.ToString();
             if (txbMessage.Text != string.Empty)
-                client.Send(Serialize("[" + txbUsername.Text + "]: " + txbMessage.Text));
+                client.Send(Serialize(timestamp + "\n" + "[" + txbUsername.Text + "]: " + txbMessage.Text + "\n"));
+
         }
         // nhan tin
         void Receive()
@@ -101,7 +117,6 @@ namespace Client
         // add message vao khung chat
         void AddMessage(string s)
         {
-
             richTextBox1.Text += s + "\n";
             txbMessage.Text ="";
         }
