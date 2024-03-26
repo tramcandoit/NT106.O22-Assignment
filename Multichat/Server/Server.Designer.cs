@@ -39,6 +39,7 @@
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(872, 532);
+
             this.richTextBox1.TabIndex = 7;
             this.richTextBox1.Text = "";
             // 
@@ -50,6 +51,7 @@
             this.ClientSize = new System.Drawing.Size(900, 562);
             this.Controls.Add(this.richTextBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+
             this.Name = "Server";
             this.Text = "Server";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Server_FormClosed);
