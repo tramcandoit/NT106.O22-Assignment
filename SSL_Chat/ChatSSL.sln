@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatSSL", "ChatSSL\ChatSSL.csproj", "{DE1A60D6-2E86-41D0-B063-21EE3A444C33}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE1A60D6-2E86-41D0-B063-21EE3A444C33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE1A60D6-2E86-41D0-B063-21EE3A444C33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE1A60D6-2E86-41D0-B063-21EE3A444C33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE1A60D6-2E86-41D0-B063-21EE3A444C33}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EEA310B1-EF9D-43D9-A981-8F412C2C15E4}
+	EndGlobalSection
+EndGlobal
