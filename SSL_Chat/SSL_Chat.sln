@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSL_Chat_Client", "SSL_Chat\SSL_Chat_Client.csproj", "{CBAD5956-335C-469E-993C-C27BD992BBA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SSL_Chat_Server", "SSL_Chat_Server\SSL_Chat_Server.csproj", "{7B3666F1-F924-4A8C-BA55-4D7EE23E4062}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBAD5956-335C-469E-993C-C27BD992BBA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBAD5956-335C-469E-993C-C27BD992BBA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBAD5956-335C-469E-993C-C27BD992BBA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBAD5956-335C-469E-993C-C27BD992BBA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B3666F1-F924-4A8C-BA55-4D7EE23E4062}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B3666F1-F924-4A8C-BA55-4D7EE23E4062}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B3666F1-F924-4A8C-BA55-4D7EE23E4062}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B3666F1-F924-4A8C-BA55-4D7EE23E4062}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DD7C47A3-BADB-4896-A505-26E7A18C0C60}
+	EndGlobalSection
+EndGlobal
